@@ -16,9 +16,9 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 const formSchema = z.object({
-  name: z.string().min(3, 'Nome deve ter ao menos 3 caracteres'),
-  email: z.string().email('E-mail inválido'),
-  message: z.string().min(10, 'Mensagem deve ter ao menos 10 caracteres'),
+  nome: z.string().min(3, 'Nome deve ter no mínimo 3 caracteres.'),
+  email: z.string().email('E-mail inválido.'),
+  mensagem: z.string().min(10, 'Mensagem deve ter no mínimo 10 caracteres.'),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -26,12 +26,12 @@ type FormValues = z.infer<typeof formSchema>;
 export default function ContactForm() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: { name: '', email: '', message: '' },
+    defaultValues: { nome: '', email: '', mensagem: '' },
   });
 
   function onSubmit(data: FormValues) {
-    console.log('Dados do formulário:', data);
-    alert('Mensagem enviada com sucesso! O conselho retornará em breve.');
+    console.log(data);
+    alert('Mensagem enviada! O conselho retornará em breve.');
     form.reset();
   }
 
@@ -40,7 +40,7 @@ export default function ContactForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
         <FormField
           control={form.control}
-          name="name"
+          name="nome"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Nome</FormLabel>
@@ -66,13 +66,13 @@ export default function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="message"
+          name="mensagem"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Mensagem</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Descreva sua dúvida ou denúncia..."
+                  placeholder="Escreva sua dúvida ou denúncia..."
                   rows={5}
                   {...field}
                 />

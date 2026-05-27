@@ -31,7 +31,7 @@ describe('HeroSection', () => {
   it('renderiza o titulo principal', () => {
     render(<HeroSection />);
     expect(
-      screen.getByText('Garantindo os Direitos da Infância e Adolescência'),
+      screen.getByText('Protegendo a Infância e Adolescência'),
     ).toBeInTheDocument();
   });
 
@@ -40,9 +40,9 @@ describe('HeroSection', () => {
     expect(screen.getByText('Saiba Mais')).toBeInTheDocument();
   });
 
-  it('botao CTA linka para sobre-eca', () => {
+  it('botao CTA linka para /sobre', () => {
     render(<HeroSection />);
     const link = screen.getByText('Saiba Mais').closest('a');
-    expect(link).toHaveAttribute('href', '/sobre-eca');
+    expect(link).toHaveAttribute('href', '/sobre');
   });
 });

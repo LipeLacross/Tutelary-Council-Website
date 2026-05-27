@@ -1,4 +1,4 @@
-import ActionCard from '@/components/ActionCard';
+import InfoCard from '@/components/InfoCard';
 import { render, screen } from '@testing-library/react';
 
 vi.mock('next/link', () => ({
@@ -39,28 +39,23 @@ vi.mock('@/components/ui/card', () => ({
 }));
 
 const defaultProps = {
-  title: 'Teste Title',
-  description: 'Teste Description',
-  image: '/imagens/test.svg',
-  href: '/teste',
+  titulo: 'Direitos da Criança',
+  descricao: 'Conheça os direitos garantidos pelo ECA.',
+  link: '/sobre',
 };
 
-describe('ActionCard', () => {
+describe('InfoCard', () => {
   it('renderiza titulo e descricao', () => {
-    render(<ActionCard {...defaultProps} />);
-    expect(screen.getByText('Teste Title')).toBeInTheDocument();
-    expect(screen.getByText('Teste Description')).toBeInTheDocument();
-  });
-
-  it('renderiza imagem com alt correto', () => {
-    render(<ActionCard {...defaultProps} />);
-    const img = screen.getByAltText('Teste Title');
-    expect(img).toHaveAttribute('src', '/imagens/test.svg');
+    render(<InfoCard {...defaultProps} />);
+    expect(screen.getByText('Direitos da Criança')).toBeInTheDocument();
+    expect(
+      screen.getByText('Conheça os direitos garantidos pelo ECA.'),
+    ).toBeInTheDocument();
   });
 
   it('linka para o href correto', () => {
-    render(<ActionCard {...defaultProps} />);
-    const link = screen.getByText('Teste Title').closest('a');
-    expect(link).toHaveAttribute('href', '/teste');
+    render(<InfoCard {...defaultProps} />);
+    const link = screen.getByText('Direitos da Criança').closest('a');
+    expect(link).toHaveAttribute('href', '/sobre');
   });
 });

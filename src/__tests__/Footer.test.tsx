@@ -9,7 +9,9 @@ describe('Footer', () => {
 
   it('renderiza o endereco placeholder', () => {
     render(<Footer />);
-    expect(screen.getByText(/Rua Exemplo/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Endereço do Conselho Tutelar/),
+    ).toBeInTheDocument();
   });
 
   it('renderiza a atribuicao do projeto', () => {

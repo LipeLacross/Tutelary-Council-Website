@@ -42,9 +42,9 @@ describe('Header', () => {
   it('renderiza os links de navegacao', () => {
     render(<Header />);
     expect(screen.getByText('Início')).toBeInTheDocument();
-    expect(screen.getByText('Sobre o ECA')).toBeInTheDocument();
-    expect(screen.getByText('Notícias')).toBeInTheDocument();
-    expect(screen.getByText('Como Acionar')).toBeInTheDocument();
+    expect(screen.getByText('Sobre')).toBeInTheDocument();
+    expect(screen.getByText('Serviços')).toBeInTheDocument();
+    expect(screen.getByText('Contato')).toBeInTheDocument();
   });
 
   it('possui link para a pagina inicial', () => {

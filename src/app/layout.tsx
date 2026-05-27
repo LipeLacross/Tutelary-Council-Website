@@ -4,9 +4,9 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 export const metadata: Metadata = {
-  title: 'Conselho Tutelar - Proteção à Infância e Adolescência',
+  title: 'Conselho Tutelar — Proteção à Infância e Adolescência',
   description:
-    'Site institucional do Conselho Tutelar. Informações sobre o ECA, canais de denúncia e ações sociais.',
+    'Site institucional do Conselho Tutelar. Informações sobre o ECA, serviços e canais de denúncia.',
 };
 
 export default function RootLayout({

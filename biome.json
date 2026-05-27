@@ -24,6 +24,6 @@
     }
   },
   "files": {
-    "ignore": ["node_modules", ".next", "public"]
+    "ignore": ["node_modules", ".next", "public", "next-env.d.ts"]
   }
 }

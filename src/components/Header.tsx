@@ -12,18 +12,18 @@ export default function Header() {
           <Link href="/" className="hover:text-orange-400 transition">
             Início
           </Link>
-          <Link href="/sobre-eca" className="hover:text-orange-400 transition">
-            Sobre o ECA
+          <Link href="/sobre" className="hover:text-orange-400 transition">
+            Sobre
           </Link>
-          <Link href="/noticias" className="hover:text-orange-400 transition">
-            Notícias
+          <Link href="/servicos" className="hover:text-orange-400 transition">
+            Serviços
           </Link>
           <Link href="/contato">
             <Button
               variant="outline"
               className="text-white border-white hover:bg-orange-500 hover:text-white"
             >
-              Como Acionar
+              Contato
             </Button>
           </Link>
         </nav>

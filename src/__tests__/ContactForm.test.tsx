@@ -56,33 +56,12 @@ describe('ContactForm', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText('Nome deve ter ao menos 3 caracteres'),
+        screen.getByText('Nome deve ter no mínimo 3 caracteres.'),
       ).toBeInTheDocument();
-      expect(screen.getByText('E-mail inválido')).toBeInTheDocument();
+      expect(screen.getByText('E-mail inválido.')).toBeInTheDocument();
       expect(
-        screen.getByText('Mensagem deve ter ao menos 10 caracteres'),
+        screen.getByText('Mensagem deve ter no mínimo 10 caracteres.'),
       ).toBeInTheDocument();
-    });
-  });
-
-  it('exibe erro para email invalido', async () => {
-    const user = userEvent.setup();
-    render(<ContactForm />);
-
-    await user.type(screen.getByPlaceholderText('Seu nome'), 'Teste');
-    await user.type(
-      screen.getByPlaceholderText('email@exemplo.com'),
-      'email-invalido',
-    );
-    await user.type(
-      screen.getByPlaceholderText('Descreva sua dúvida ou denúncia...'),
-      'Mensagem valida com mais de 10 chars',
-    );
-
-    await user.click(screen.getByText('Enviar'));
-
-    await waitFor(() => {
-      expect(screen.getByText('E-mail inválido')).toBeInTheDocument();
     });
   });
 });

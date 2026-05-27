@@ -9,18 +9,10 @@
 
 ## 🔨 Features
 
-- **Home** — Hero section with CTA and social action cards
-- **About ECA** — Informational content about the Child and Adolescent Statute
-- **News** — MDX-powered blog with static site generation (SSG)
-- **Contact** — Form with validation via React Hook Form + Zod
-- **Disque 100** — Anonymous whistleblower channel highlight
-
-### 📸 Visual Preview
-
-<div align="center">
-  <img src="public/imagens/screenshot-home.png" alt="Home page" width="80%" style="margin: 16px 0; border-radius: 10px;">
-  <img src="public/imagens/screenshot-noticias.png" alt="News page" width="80%" style="margin: 16px 0; border-radius: 10px;">
-</div>
+- **Home** — Council presentation with info cards
+- **About** — Explanation of the Tutelary Council and the Child and Adolescent Statute
+- **Services** — Services provided and how to reach the Council
+- **Contact** — Form with validation and Disque 100 highlight
 
 ## ✔️ Technologies
 
@@ -29,100 +21,59 @@
 | Framework | Next.js 16 (App Router) |
 | Language | TypeScript (strict) |
 | Styling | Tailwind CSS v4 |
-| Components | shadcn/ui (accessible, headless) |
-| Content | MDX + next-mdx-remote |
+| Components | shadcn/ui |
 | Forms | React Hook Form + Zod |
 | Testing | Vitest + Testing Library |
 | Quality | Biome (lint + format) |
 | Deploy | Vercel |
 
-## 📊 Architecture Diagram
-
-```mermaid
-graph TD
-    A[User] --> B[Next.js 16 - App Router]
-    B --> C[Static Pages SSG]
-    B --> D[React Components]
-    D --> E[shadcn/ui]
-    D --> F[React Hook Form + Zod]
-    B --> G[MDX Content]
-    G --> H[.mdx files in src/content]
-    B --> I[Tailwind CSS v4]
-```
-
-## 📁 Project Structure
+## 📁 Structure
 
 ```
 src/
-├── app/                    # Next.js App Router routes
-│   ├── globals.css        # Global styles + shadcn/ui tokens
-│   ├── layout.tsx         # Root layout (Header + Footer)
-│   ├── page.tsx           # Home page
-│   ├── sobre-eca/         # ECA institutional page
-│   ├── contato/           # Contact page
-│   └── noticias/
-│       ├── page.tsx       # News listing
-│       └── [slug]/        # Individual news (SSG)
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx           # Home
+│   ├── sobre/             # About the Council and the Statute
+│   ├── servicos/          # Services
+│   └── contato/           # Contact form + Disque 100
 ├── components/
-│   ├── ui/                # shadcn/ui (button, card, form, input, label, textarea)
+│   ├── ui/                # shadcn/ui primitives
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   ├── HeroSection.tsx
-│   ├── ActionCard.tsx
+│   ├── InfoCard.tsx
 │   └── ContactForm.tsx
-├── content/noticias/       # MDX news files
-├── lib/utils.ts            # cn() utility for class merging
+├── lib/utils.ts
 └── __tests__/              # Vitest tests
 ```
 
 ## 🛠️ Getting Started
 
-### Prerequisites
-
-- Node.js 18+ (recommended 22+)
-
 ```bash
-node -v
-```
-
-### Steps
-
-```bash
-# 1. Clone the repository
-git clone <REPO_URL>
+git clone <URL>
 cd tutelary-council-website
-
-# 2. Install dependencies
 npm install
-
-# 3. Start development server
-npm run dev
-
-# 4. Open http://localhost:3000
+npm run dev        # http://localhost:3000
 ```
 
-### Available Scripts
+### Scripts
 
 | Command | Description |
 | :------ | :---------- |
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm test` | Run tests (Vitest) |
-| `npm run test:watch` | Watch mode tests |
-| `npm run lint` | Lint with Biome |
-| `npm run format` | Format with Biome |
-| `npm run typecheck` | TypeScript type check |
+| `npm run dev` | Development |
+| `npm run build` | Production build |
+| `npm test` | Run tests |
+| `npm run lint` | Biome check |
+| `npm run format` | Biome format |
 
 ## 🌐 Deploy
 
-Deploy on **Vercel**:
-
 1. Create a GitHub repository
 2. Push the code
-3. Go to [vercel.com](https://vercel.com) and import the repository
-4. Framework auto-detected as Next.js
-5. Automatic deploy on every `git push`
+3. Import at [Vercel](https://vercel.com)
+4. Auto-deploy on every `git push`
 
 ---
 

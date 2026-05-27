@@ -1,24 +1,21 @@
-import ActionCard from '@/components/ActionCard';
 import HeroSection from '@/components/HeroSection';
+import InfoCard from '@/components/InfoCard';
 
-const actions = [
+const acoes = [
   {
-    title: 'Campanha de Doação de Brinquedos',
-    description: 'Arrecadamos brinquedos para o Dia das Crianças. Participe!',
-    image: '/imagens/doacao.svg',
-    href: '/noticias/campanha-doacao',
+    titulo: 'Direitos da Criança',
+    descricao: 'Conheça os direitos fundamentais garantidos pelo ECA.',
+    link: '/sobre',
   },
   {
-    title: 'Palestra: Entendendo o ECA',
-    description: 'Educadores e pais discutem a importância do Estatuto.',
-    image: '/imagens/palestra.svg',
-    href: '/noticias/palestra-eca',
+    titulo: 'Como Denunciar',
+    descricao: 'Canais seguros e anônimos para relatar violações.',
+    link: '/contato',
   },
   {
-    title: 'Canal de Denúncias',
-    description: 'Saiba como e quando acionar o Disque 100.',
-    image: '/imagens/disque100.svg',
-    href: '/contato',
+    titulo: 'Serviços do Conselho',
+    descricao: 'Atendimento, orientação e medidas de proteção.',
+    link: '/servicos',
   },
 ];
 
@@ -28,11 +25,11 @@ export default function Home() {
       <HeroSection />
       <section className="mt-12">
         <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">
-          Nossas Ações Sociais
+          Nossas Ações
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {actions.map((item) => (
-            <ActionCard key={item.title} {...item} />
+          {acoes.map((item) => (
+            <InfoCard key={item.titulo} {...item} />
           ))}
         </div>
       </section>

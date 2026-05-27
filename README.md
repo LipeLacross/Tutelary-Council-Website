@@ -7,122 +7,73 @@
 >
 > **ODS 16** — Paz, justiça e instituições eficazes.
 
-## 🔨 Funcionalidades do Projeto
+## 🔨 Funcionalidades
 
-- **Home** — Hero section com CTA e cards das ações sociais
-- **Sobre o ECA** — Conteúdo informativo sobre o Estatuto da Criança e do Adolescente
-- **Notícias** — Blog com conteúdo em MDX, geração de páginas estáticas (SSG)
-- **Contato** — Formulário com validação via React Hook Form + Zod
-- **Disque 100** — Destaque do canal de denúncias anônimas
+- **Home** — Apresentação do Conselho Tutelar com cards informativos
+- **Sobre** — Explicação sobre o Conselho Tutelar e o ECA
+- **Serviços** — Serviços prestados e como acionar o Conselho
+- **Contato** — Formulário com validação e destaque do Disque 100
 
-### 📸 Exemplo Visual do Projeto
-
-<div align="center">
-  <img src="public/imagens/screenshot-home.png" alt="Home page" width="80%" style="margin: 16px 0; border-radius: 10px;">
-  <img src="public/imagens/screenshot-noticias.png" alt="Página de notícias" width="80%" style="margin: 16px 0; border-radius: 10px;">
-</div>
-
-## ✔️ Técnicas e Tecnologias Utilizadas
+## ✔️ Técnicas e Tecnologias
 
 | Camada | Tecnologia |
 | :----- | :--------- |
 | Framework | Next.js 16 (App Router) |
 | Linguagem | TypeScript (strict) |
 | Estilização | Tailwind CSS v4 |
-| Componentes | shadcn/ui (acessíveis, headless) |
-| Conteúdo | MDX + next-mdx-remote |
+| Componentes | shadcn/ui |
 | Formulário | React Hook Form + Zod |
 | Testes | Vitest + Testing Library |
 | Qualidade | Biome (lint + format) |
 | Deploy | Vercel |
 
-## 📊 Diagrama da Arquitetura
-
-```mermaid
-graph TD
-    A[Usuário] --> B[Next.js 16 - App Router]
-    B --> C[Páginas Estáticas SSG]
-    B --> D[Componentes React]
-    D --> E[shadcn/ui]
-    D --> F[React Hook Form + Zod]
-    B --> G[MDX - Conteúdo]
-    G --> H[Arquivos .mdx em src/content]
-    B --> I[Tailwind CSS v4]
-```
-
-## 📁 Estrutura do Projeto
+## 📁 Estrutura
 
 ```
 src/
-├── app/                    # Rotas do Next.js App Router
+├── app/
 │   ├── globals.css        # Estilos globais + tokens shadcn/ui
 │   ├── layout.tsx         # Layout raiz (Header + Footer)
 │   ├── page.tsx           # Home
-│   ├── sobre-eca/         # Página institucional do ECA
-│   ├── contato/           # Página de contato
-│   └── noticias/
-│       ├── page.tsx       # Listagem de notícias
-│       └── [slug]/        # Notícia individual (SSG)
+│   ├── sobre/             # Sobre o Conselho e o ECA
+│   ├── servicos/          # Serviços prestados
+│   └── contato/           # Formulário + Disque 100
 ├── components/
 │   ├── ui/                # shadcn/ui (button, card, form, input, label, textarea)
 │   ├── Header.tsx
 │   ├── Footer.tsx
 │   ├── HeroSection.tsx
-│   ├── ActionCard.tsx
+│   ├── InfoCard.tsx
 │   └── ContactForm.tsx
-├── content/noticias/       # Arquivos MDX das notícias
-├── lib/utils.ts            # Função cn() para merge de classes
+├── lib/utils.ts
 └── __tests__/              # Testes com Vitest
 ```
 
-## 🛠️ Abrir e Rodar o Projeto
-
-### Pré-requisitos
-
-- Node.js 18+ (recomendado 22+)
+## 🛠️ Como Rodar
 
 ```bash
-node -v
-```
-
-### Passos
-
-```bash
-# 1. Clone o repositório
-git clone <URL_DO_REPOSITORIO>
+git clone <URL>
 cd tutelary-council-website
-
-# 2. Instale as dependências
 npm install
-
-# 3. Inicie o servidor de desenvolvimento
-npm run dev
-
-# 4. Acesse http://localhost:3000
+npm run dev        # http://localhost:3000
 ```
 
-### Scripts Disponíveis
+### Scripts
 
 | Comando | Descrição |
 | :------ | :-------- |
-| `npm run dev` | Inicia servidor de desenvolvimento |
-| `npm run build` | Gera build de produção |
-| `npm run start` | Inicia servidor de produção |
-| `npm test` | Executa testes (Vitest) |
-| `npm run test:watch` | Testes em modo watch |
-| `npm run lint` | Verifica código com Biome |
-| `npm run format` | Formata código com Biome |
-| `npm run typecheck` | Verificação de tipos TypeScript |
+| `npm run dev` | Desenvolvimento |
+| `npm run build` | Build produção |
+| `npm test` | Executa testes |
+| `npm run lint` | Biome check |
+| `npm run format` | Biome format |
 
 ## 🌐 Deploy
 
-O deploy pode ser feito na **Vercel**:
-
 1. Crie um repositório no GitHub
 2. Faça push do código
-3. Acesse [vercel.com](https://vercel.com) e importe o repositório
-4. Framework detectado automaticamente como Next.js
-5. Deploy automático a cada `git push`
+3. Importe na [Vercel](https://vercel.com)
+4. Deploy automático a cada `git push`
 
 ---
 
