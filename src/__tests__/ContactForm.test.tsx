@@ -1,6 +1,6 @@
+import ContactForm from '@/components/ContactForm';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import ContactForm from '@/components/ContactForm';
 
 vi.mock('@/components/ui/button', () => ({
   Button: ({
@@ -19,7 +19,9 @@ vi.mock('@/components/ui/button', () => ({
 }));
 
 vi.mock('@/components/ui/input', () => ({
-  Input: (props: React.InputHTMLAttributes<HTMLInputElement>) => <input {...props} />,
+  Input: (props: React.InputHTMLAttributes<HTMLInputElement>) => (
+    <input {...props} />
+  ),
 }));
 
 vi.mock('@/components/ui/textarea', () => ({
@@ -29,7 +31,10 @@ vi.mock('@/components/ui/textarea', () => ({
 }));
 
 vi.mock('@/components/ui/label', () => ({
-  Label: ({ children, htmlFor }: { children: React.ReactNode; htmlFor?: string }) => (
+  Label: ({
+    children,
+    htmlFor,
+  }: { children: React.ReactNode; htmlFor?: string }) => (
     <label htmlFor={htmlFor}>{children}</label>
   ),
 }));
@@ -50,9 +55,13 @@ describe('ContactForm', () => {
     await user.click(screen.getByText('Enviar'));
 
     await waitFor(() => {
-      expect(screen.getByText('Nome deve ter ao menos 3 caracteres')).toBeInTheDocument();
+      expect(
+        screen.getByText('Nome deve ter ao menos 3 caracteres'),
+      ).toBeInTheDocument();
       expect(screen.getByText('E-mail inválido')).toBeInTheDocument();
-      expect(screen.getByText('Mensagem deve ter ao menos 10 caracteres')).toBeInTheDocument();
+      expect(
+        screen.getByText('Mensagem deve ter ao menos 10 caracteres'),
+      ).toBeInTheDocument();
     });
   });
 
@@ -61,8 +70,14 @@ describe('ContactForm', () => {
     render(<ContactForm />);
 
     await user.type(screen.getByPlaceholderText('Seu nome'), 'Teste');
-    await user.type(screen.getByPlaceholderText('email@exemplo.com'), 'email-invalido');
-    await user.type(screen.getByPlaceholderText('Descreva sua dúvida ou denúncia...'), 'Mensagem valida com mais de 10 chars');
+    await user.type(
+      screen.getByPlaceholderText('email@exemplo.com'),
+      'email-invalido',
+    );
+    await user.type(
+      screen.getByPlaceholderText('Descreva sua dúvida ou denúncia...'),
+      'Mensagem valida com mais de 10 chars',
+    );
 
     await user.click(screen.getByText('Enviar'));
 

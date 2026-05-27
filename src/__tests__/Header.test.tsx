@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import Header from '@/components/Header';
+import { render, screen } from '@testing-library/react';
 
 vi.mock('next/link', () => ({
   default: ({
@@ -26,7 +26,11 @@ vi.mock('@/components/ui/button', () => ({
     children: React.ReactNode;
     className?: string;
     variant?: string;
-  }) => <button className={className}>{children}</button>,
+  }) => (
+    <button type="button" className={className}>
+      {children}
+    </button>
+  ),
 }));
 
 describe('Header', () => {

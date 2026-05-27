@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import HeroSection from '@/components/HeroSection';
+import { render, screen } from '@testing-library/react';
 
 vi.mock('next/link', () => ({
   default: ({
@@ -20,7 +20,11 @@ vi.mock('@/components/ui/button', () => ({
     children: React.ReactNode;
     size?: string;
     className?: string;
-  }) => <button className={className}>{children}</button>,
+  }) => (
+    <button type="button" className={className}>
+      {children}
+    </button>
+  ),
 }));
 
 describe('HeroSection', () => {

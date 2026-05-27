@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import ActionCard from '@/components/ActionCard';
+import { render, screen } from '@testing-library/react';
 
 vi.mock('next/link', () => ({
   default: ({
@@ -12,16 +12,28 @@ vi.mock('next/link', () => ({
 }));
 
 vi.mock('@/components/ui/card', () => ({
-  Card: ({ children, className }: { children: React.ReactNode; className?: string }) => (
+  Card: ({
+    children,
+    className,
+  }: { children: React.ReactNode; className?: string }) => (
     <div className={className}>{children}</div>
   ),
-  CardHeader: ({ children, className }: { children: React.ReactNode; className?: string }) => (
+  CardHeader: ({
+    children,
+    className,
+  }: { children: React.ReactNode; className?: string }) => (
     <div className={className}>{children}</div>
   ),
-  CardContent: ({ children, className }: { children: React.ReactNode; className?: string }) => (
+  CardContent: ({
+    children,
+    className,
+  }: { children: React.ReactNode; className?: string }) => (
     <div className={className}>{children}</div>
   ),
-  CardTitle: ({ children, className }: { children: React.ReactNode; className?: string }) => (
+  CardTitle: ({
+    children,
+    className,
+  }: { children: React.ReactNode; className?: string }) => (
     <h3 className={className}>{children}</h3>
   ),
 }));
