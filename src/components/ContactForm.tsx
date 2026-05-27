@@ -37,15 +37,21 @@ export default function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
         <FormField
           control={form.control}
           name="nome"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nome</FormLabel>
+              <FormLabel className="text-foreground font-medium">
+                Nome
+              </FormLabel>
               <FormControl>
-                <Input placeholder="Seu nome" {...field} />
+                <Input
+                  placeholder="Seu nome"
+                  className="border-input focus-visible:ring-ring"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -56,9 +62,15 @@ export default function ContactForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>E-mail</FormLabel>
+              <FormLabel className="text-foreground font-medium">
+                E-mail
+              </FormLabel>
               <FormControl>
-                <Input placeholder="email@exemplo.com" {...field} />
+                <Input
+                  placeholder="email@exemplo.com"
+                  className="border-input focus-visible:ring-ring"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -69,11 +81,14 @@ export default function ContactForm() {
           name="mensagem"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Mensagem</FormLabel>
+              <FormLabel className="text-foreground font-medium">
+                Mensagem
+              </FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Escreva sua dúvida ou denúncia..."
                   rows={5}
+                  className="border-input focus-visible:ring-ring resize-none"
                   {...field}
                 />
               </FormControl>
@@ -83,7 +98,7 @@ export default function ContactForm() {
         />
         <Button
           type="submit"
-          className="w-full bg-orange-500 hover:bg-orange-600"
+          className="w-full bg-cta text-cta-foreground hover:bg-cta/90 shadow-md hover:shadow-lg transition-all"
         >
           Enviar
         </Button>

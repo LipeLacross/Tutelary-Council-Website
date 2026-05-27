@@ -35,6 +35,13 @@ describe('HeroSection', () => {
     ).toBeInTheDocument();
   });
 
+  it('identifica Belo Jardim', () => {
+    render(<HeroSection />);
+    expect(
+      screen.getByText('Conselho Tutelar de Belo Jardim — PE'),
+    ).toBeInTheDocument();
+  });
+
   it('renderiza o botao CTA', () => {
     render(<HeroSection />);
     expect(screen.getByText('Saiba Mais')).toBeInTheDocument();

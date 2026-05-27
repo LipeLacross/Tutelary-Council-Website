@@ -16,9 +16,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className="min-h-screen flex flex-col bg-gray-50">
+      <body className="min-h-screen flex flex-col bg-muted/30">
+        <div className="bg-foreground/90 text-background text-[11px] py-1.5">
+          <div className="container mx-auto px-4 flex items-center justify-between">
+            <span className="font-medium tracking-wide">Governo Federal</span>
+            <div className="flex items-center gap-3">
+              <a href="#conteudo" className="hover:underline underline-offset-2">
+                Ir para o conteúdo
+              </a>
+              <span className="opacity-40">|</span>
+              <a href="#rodape" className="hover:underline underline-offset-2">
+                Ir para o rodapé
+              </a>
+            </div>
+          </div>
+        </div>
         <Header />
-        <main className="flex-1 container mx-auto px-4 py-8">{children}</main>
+        <main id="conteudo" className="flex-1 container mx-auto px-4 py-12">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

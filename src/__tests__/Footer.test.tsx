@@ -7,11 +7,9 @@ describe('Footer', () => {
     expect(screen.getByText('Emergência: Disque 100')).toBeInTheDocument();
   });
 
-  it('renderiza o endereco placeholder', () => {
+  it('renderiza o endereco real', () => {
     render(<Footer />);
-    expect(
-      screen.getByText(/Endereço do Conselho Tutelar/),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/Rua São Lourenço/)).toBeInTheDocument();
   });
 
   it('renderiza a atribuicao do projeto', () => {
