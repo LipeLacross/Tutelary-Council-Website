@@ -20,8 +20,21 @@ export default function Footer() {
             </p>
             <div className="text-xs text-primary-foreground/70 space-y-0.5 leading-relaxed">
               <p>Rua São Lourenço, nº 13, Centro — Belo Jardim/PE</p>
-              <p>Tel: (81) 3726-8731 | (81) 3726-2800</p>
+              <p>Tel: (81) 3726-8731 | (81) 3726-2800 | (81) 99287-0017</p>
               <p>Seg a Dom 08:00 às 17:00 (plantão 24h)</p>
+              <a
+                href="https://www.instagram.com/conselhotutelar_bj/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-cta hover:text-cta/80 transition-colors mt-1"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                @conselhotutelar_bj
+              </a>
             </div>
           </div>
           <div className="text-xs text-primary-foreground/50 flex-shrink-0 space-y-0.5 leading-relaxed">

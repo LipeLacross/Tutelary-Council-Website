@@ -24,11 +24,6 @@ export default function RootLayout({
             alt=""
             className="absolute inset-0 w-full h-full object-cover opacity-35"
           />
-          <img
-            src="/imagens/maos-circulo.jpeg"
-            alt=""
-            className="absolute inset-0 w-full h-full object-cover opacity-25"
-          />
           <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-primary/70" />
           <div className="absolute top-4 left-4 w-24 h-24 rounded-full bg-white/5 blur-xl" />
           <div className="absolute bottom-4 right-4 w-32 h-32 rounded-full bg-secondary/10 blur-xl" />
