@@ -4,12 +4,15 @@ export default function Footer() {
       <div className="h-1 w-full bg-gradient-to-r from-transparent via-cta to-transparent" />
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row items-center gap-6">
-          <div className="bg-white rounded-lg px-4 py-2 flex-shrink-0">
-            <img
-              src="/imagens/logo-prefeitura-bj.png"
-              alt="Prefeitura de Belo Jardim"
-              className="h-14 w-auto object-contain"
-            />
+          <div className="flex flex-col items-center gap-1 flex-shrink-0">
+            <div className="bg-white/90 rounded-lg px-3 py-1.5">
+              <img
+                src="/imagens/logo-prefeitura-bj.png"
+                alt="Prefeitura de Belo Jardim"
+                className="h-10 w-auto object-contain"
+              />
+            </div>
+            <span className="text-[10px] text-primary-foreground/40 tracking-wide">Apoio institucional</span>
           </div>
           <div className="flex-1 min-w-0 space-y-1">
             <p className="font-bold text-cta tracking-wide">

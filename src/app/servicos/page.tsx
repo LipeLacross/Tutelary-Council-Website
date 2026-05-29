@@ -5,6 +5,18 @@ export default function Servicos() {
         Serviços do Conselho Tutelar
       </h1>
       <div className="w-16 h-1 bg-cta rounded-full mb-8 animate-shimmer" />
+      <div className="relative rounded-xl overflow-hidden mb-8 h-40 md:h-56">
+        <img
+          src="/imagens/mae-filha-maos.jpeg"
+          alt="Proteção infantil"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
+        <div className="absolute bottom-3 left-4 text-white">
+          <p className="text-base font-bold drop-shadow-lg">Cuidado e proteção</p>
+          <p className="text-xs text-white/70">Atendimento humanizado à comunidade</p>
+        </div>
+      </div>
       <article className="space-y-6 text-foreground/80 leading-relaxed">
         <p>
           O Conselho Tutelar de Belo Jardim oferece diversos serviços à

@@ -17,6 +17,18 @@ export default function Sobre() {
           className="w-28 h-20 md:w-36 md:h-28 object-contain animate-fade-in"
         />
       </div>
+      <div className="relative rounded-xl overflow-hidden mb-8 h-48 md:h-64">
+        <img
+          src="/imagens/familia-maos-juntas.jpeg"
+          alt="Família unida"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
+        <div className="absolute bottom-4 left-4 text-white">
+          <p className="text-lg font-bold drop-shadow-lg">Proteção e cuidado</p>
+          <p className="text-sm text-white/70">Família unida pelos direitos da infância</p>
+        </div>
+      </div>
       <article className="space-y-6 text-foreground/80 leading-relaxed">
         <p>
           O Conselho Tutelar é uma instituição criada pelo Estatuto da Criança e
@@ -47,7 +59,7 @@ export default function Sobre() {
           <img
             src="/imagens/eca-badge.svg"
             alt="ECA - Estatuto da Criança e do Adolescente"
-            className="w-28 md:w-36 h-auto object-contain flex-shrink-0"
+            className="w-56 md:w-72 h-auto object-contain flex-shrink-0"
           />
           <div>
             <h2 className="text-2xl font-semibold text-primary">

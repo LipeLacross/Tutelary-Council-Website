@@ -8,6 +8,18 @@ export default function Contato() {
       </h1>
       <div className="w-16 h-1 bg-cta rounded-full mb-8 animate-shimmer" />
 
+      <div className="relative rounded-xl overflow-hidden mb-8 h-40 md:h-56">
+        <img
+          src="/imagens/maos-familia.jpeg"
+          alt="Mãos unidas pela proteção"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
+        <div className="absolute bottom-3 left-4 text-white">
+          <p className="text-base font-bold drop-shadow-lg">Entre em contato</p>
+          <p className="text-xs text-white/70">Estamos aqui para ajudar</p>
+        </div>
+      </div>
       <section className="space-y-6 mb-10">
         <h2 className="text-xl font-semibold text-primary">
           Informações de Contato

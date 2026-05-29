@@ -6,6 +6,11 @@ export default function HeroSection() {
     <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary via-primary to-secondary/60 text-primary-foreground p-12 md:p-16 text-center animate-gradient">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(253,171,15,0.12),transparent_50%)]" />
       <img
+        src="/imagens/adulto-crianca-maos.jpeg"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.08] pointer-events-none"
+      />
+      <img
         src="/imagens/bandeira-bj.png"
         alt=""
         className="absolute -top-10 -right-10 w-48 md:w-64 opacity-[0.07] rotate-12 pointer-events-none object-contain"
