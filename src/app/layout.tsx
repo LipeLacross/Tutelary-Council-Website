@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Conselho Tutelar — Proteção à Infância e Adolescência',
   description:
     'Site institucional do Conselho Tutelar. Informações sobre o ECA, serviços e canais de denúncia.',
+  icons: { icon: '/favicon.svg' },
 };
 
 export default function RootLayout({
