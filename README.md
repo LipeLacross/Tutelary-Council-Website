@@ -22,10 +22,10 @@ Site institucional estático do Conselho Tutelar de Belo Jardim – PE, desenvol
 ### 📸 Screenshots
 
 <div align="center">
-  <img src="/Screenshot_30-5-2026_93922_conselhotutelarbj.vercel.app.jpeg" alt="Home" width="80%" style="margin: 8px 0; border-radius: 10px;">
-  <img src="/Screenshot_30-5-2026_93938_conselhotutelarbj.vercel.app.jpeg" alt="Sobre" width="80%" style="margin: 8px 0; border-radius: 10px;">
-  <img src="/Screenshot_30-5-2026_93947_conselhotutelarbj.vercel.app.jpeg" alt="Serviços" width="80%" style="margin: 8px 0; border-radius: 10px;">
-  <img src="/Screenshot_29-5-2026_134247_localhost.jpeg" alt="Contato" width="80%" style="margin: 8px 0; border-radius: 10px;">
+  <img src="public/Screenshot_30-5-2026_93922_conselhotutelarbj.vercel.app.jpeg" alt="Home" width="80%" style="margin: 8px 0; border-radius: 10px;">
+  <img src="public/Screenshot_30-5-2026_93938_conselhotutelarbj.vercel.app.jpeg" alt="Sobre" width="80%" style="margin: 8px 0; border-radius: 10px;">
+  <img src="public/Screenshot_30-5-2026_93947_conselhotutelarbj.vercel.app.jpeg" alt="Serviços" width="80%" style="margin: 8px 0; border-radius: 10px;">
+  <img src="public/Screenshot_29-5-2026_134247_localhost.jpeg" alt="Contato" width="80%" style="margin: 8px 0; border-radius: 10px;">
 </div>
 
 ## ✔️ Técnicas e Tecnologias
